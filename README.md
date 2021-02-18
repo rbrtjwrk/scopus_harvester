@@ -1,6 +1,6 @@
 # scopus_harvesting
 
-Set of functions to call _Scopus Serial Title Metadata API_ and harvesting following attributes:
+Set of functions to call _Scopus Serial Title Metadata API_ and harvest following attributes:
 
 | Scopus Journal's attributes   |
 | ----------------------------- |
