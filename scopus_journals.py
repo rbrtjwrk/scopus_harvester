@@ -8,7 +8,7 @@ from scopus_harvesting.scopus_citescore import scopus_citescore
 from scopus_harvesting.scopus_iss import parse_scopus_issn_dict, scopus_issn
 from scopus_harvesting.scopus_subject_area import scopus_subject_area
 from scopus_harvesting.scopus_subject_area_code import scopus_subject_area_code
-from scopus_harvesting.scopus_subject_classification import 
+from scopus_harvesting.scopus_subject_classification import scopus_subject_classification
 
 def scopus_journals(subject=None, count=None):
     output=pd.DataFrame()
