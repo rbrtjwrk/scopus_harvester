@@ -1,4 +1,4 @@
-from scopus_harvesting.reponse_to_json import response_to_json
+from scopus_harvesting.response_to_json import response_to_json
 from scopus_harvesting.file_to_data import file_to_data
 
 def scopus_journal_id(response):
