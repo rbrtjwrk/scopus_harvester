@@ -1,3 +1,5 @@
+import pandas as pd
+
 from scopus_harvesting.scopus_get_journals import scopus_get_journals
 from scopus_harvesting.response_to_json import response_to_json
 from scopus_harvesting.file_to_data import file_to_data
