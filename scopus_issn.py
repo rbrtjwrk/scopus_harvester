@@ -1,3 +1,6 @@
+from scopus_harvesting.reponse_to_json import response_to_json
+from scopus_harvesting.file_to_data import file_to_data
+
 def parse_scopus_issn_dict(issn_dict):
     issns=[list(issn_dict[_].values()) for _ in range(len(issn_dict))]
     issns=[issn for list in issns for issn in list]
