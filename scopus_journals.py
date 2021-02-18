@@ -10,8 +10,9 @@ from scopus_harvesting.scopus_subject_area import scopus_subject_area
 from scopus_harvesting.scopus_subject_area_code import scopus_subject_area_code
 from scopus_harvesting.scopus_subject_classification import 
 
-def scopus_journals(response):
+def scopus_journals(subject=None, count=None):
     output=pd.DataFrame()
+    response=scopus_get_journals(subject=subject, count=count)
     output["Journal_Title"]=scopus_journal_title(response)
     output["Journal_ID"]=scopus_journal_id(response)
     output["ISSN"]=scopus_issn(response)
