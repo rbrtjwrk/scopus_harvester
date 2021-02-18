@@ -3,7 +3,6 @@ def parse_scopus_issn_dict(issn_dict):
     issns=[issn for list in issns for issn in list]
     return issns
 
-
 def scopus_issn(response):
     output=[]
     f=response_to_json(response)
