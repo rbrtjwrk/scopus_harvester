@@ -19,4 +19,5 @@ But first you have to set your API credentials in function _scopus_get_journals(
 
 It is also possible to calculate SJR rank per subject area code per each serial title. To do that, run two following functions:
 df=_multiply_journals(dataframe)_
+
 df=_sjr_rank_per_subject_area_code(dataframe)_
