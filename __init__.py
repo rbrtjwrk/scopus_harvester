@@ -1,6 +1,7 @@
 import requests
 import json
 import pandas as pd
+import numpy as np
 
 from .scopus_get_journals import scopus_get_journals
 from .response_to_json import response_to_json
@@ -16,3 +17,4 @@ from .scopus_subject_classification import scopus_subject_classification
 from .scopus_journals import scopus_journals
 from .multiply_journals import multiply_journals
 from .rearrange_subject_attributes import rearrange_subject_attributes
+from .sjr_rank_per_subject_area_code import sjr_rank_per_subject_area_code
