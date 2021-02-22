@@ -14,3 +14,4 @@ from .scopus_subject_area import scopus_subject_area
 from .scopus_subject_area_code import scopus_subject_area_code
 from .scopus_subject_classification import scopus_subject_classification
 from .scopus_journals import scopus_journals
+from .multiply_journals import multiply_journals
