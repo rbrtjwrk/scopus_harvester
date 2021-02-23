@@ -16,7 +16,7 @@ def scopus_journals(subject_abbrev=None, count=None):
     if count == None or count < 1:
         raise Exception("'count' cannot be lower than 1.")
     output=pd.DataFrame()
-    response=scopus_get_journals(subject_abbrev=subject, count=count)
+    response=scopus_get_journals(subject_abbrev=subject_abbrev, count=count)
     output["Journal_Title"]=scopus_journal_title(response)
     output["Journal_ID"]=scopus_journal_id(response)
     output["ISSN"]=scopus_issn(response)
