@@ -1,5 +1,5 @@
-from scopus_harvesting.response_to_json import response_to_json
-from scopus_harvesting.file_to_data import file_to_data
+from scopus_harvester.response_to_json import response_to_json
+from scopus_harvester.file_to_data import file_to_data
 
 def parse_scopus_issn_dict(issn_dict):
     issns=[list(issn_dict[_].values()) for _ in range(len(issn_dict))]
