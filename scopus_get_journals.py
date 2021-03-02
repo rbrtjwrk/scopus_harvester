@@ -4,7 +4,7 @@ import requests
 def scopus_get_journals(subject_abbrev=None, count=None):
     payload={
             "Accept": "application/json",
-            "X-ELS-APIKey": "e5011a9e1eb81eeea51a2abc18793df0"}
+            "X-ELS-APIKey": "YOUR_API_KEY"}
     parameters={
                 "subj": subject_abbrev,
                 "content": "journal",
