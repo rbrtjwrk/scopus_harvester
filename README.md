@@ -48,4 +48,4 @@ It is also possible to calculate SJR rank per subject area code per each serial 
 4                                   452F              1208                             NaN
 ```
 
-**Note that the SJR rank per subject area code is computed only on the data you harvest. For journals that do not have a SJR, the rank is not computed.**
+**Note that the SJR rank per subject area code is computed only on the data you harvest. Also, for journals that do not have a SJR, the rank is not computed.**
