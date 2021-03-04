@@ -16,7 +16,9 @@ Set of functions to call _Scopus Serial Title Metadata API_ and harvest followin
 Although it is possible to call standalone functions separately, I recommend you to call function _scopus_journals(subject_abbrev, count)_ to obtain all of the attributes at once. List of all subject areas can be found at https://dev.elsevier.com/.
 
 ```
->>> df=scopus_journals("ARTS", 3)
+>>> import scopus_harvester as sh
+>>> 
+>>> df=sh.scopus_journals("ARTS", 3)
 >>>
 >>> df
                            Journal_Title   Journal_ID       ISSN  ...        Subject_Area   Subject_Area_Code                             Subject_Classification
@@ -46,3 +48,4 @@ It is also possible to calculate SJR rank per subject area code per each serial 
 4                                   452F              1208                             NaN
 ```
 
+Note that SJR rank per subject area code is computed only on the data you harvest.
