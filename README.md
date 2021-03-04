@@ -30,7 +30,7 @@ To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 >>>
 ```
 
-You must first set up your API credentials in function _scopus_get_journals()_ before harvesting.
+Before harvesting, you must first manually set up your API Key in the function _scopus_get_journals()_.
 
 ```
 >>> df=sh.scopus_journals("ARTS", 3)
@@ -42,7 +42,6 @@ You must first set up your API credentials in function _scopus_get_journals()_ b
 2                                   452F  21101005201             ...              [ARTS]              [1208]                   [Literature and Literary Theory]
 [3 rows x 8 columns]
 >>>
-
 ```
 
 It is also possible to calculate SJR rank per subject area code per each serial title. To do that, run three following functions in the same order:
