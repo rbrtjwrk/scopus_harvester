@@ -13,11 +13,22 @@ A set of functions to call **_Scopus Serial Title Metadata API_** and harvest fo
 | Scopus Subject Area Code         |
 | Scopus Subject Classification    |
 
-Although it is possible to call standalone functions separately, I recommend you to call function _scopus_journals(subject_abbrev, count)_ to obtain all of the attributes at once. List of all subject areas can be found at https://dev.elsevier.com/.
+Although it is possible to call standalone functions separately, I recommend you to call function _scopus_journals(subject_abbrev, count)_ to obtain all of the attributes at once.
+
+To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 
 ```
 >>> import scopus_harvester as sh
 >>> 
+>>> sh.scopus_subject_areas().head()
+>>> 
+>>>   Subject_Area                        Subject_Area: Full_Name
+0         AGRI           Agricultural and Biological Sciences
+1         ARTS                            Arts and Humanities
+2         BIOC   Biochemistry, Genetics and Molecular Biology
+3         BUSI            Business, Management and Accounting
+4         CENG                           Chemical Engineering
+>>>
 >>> df=sh.scopus_journals("ARTS", 3)
 >>>
 >>> df
