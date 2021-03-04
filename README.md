@@ -23,11 +23,11 @@ To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 >>> sh.scopus_subject_areas().head()
 >>> 
 >>>   Subject_Area                        Subject_Area: Full_Name
-0         AGRI           Agricultural and Biological Sciences
-1         ARTS                            Arts and Humanities
-2         BIOC   Biochemistry, Genetics and Molecular Biology
-3         BUSI            Business, Management and Accounting
-4         CENG                           Chemical Engineering
+0         AGRI               Agricultural and Biological Sciences
+1         ARTS                                Arts and Humanities
+2         BIOC       Biochemistry, Genetics and Molecular Biology
+3         BUSI                Business, Management and Accounting
+4         CENG                               Chemical Engineering
 >>>
 >>> df=sh.scopus_journals("ARTS", 3)
 >>>
@@ -57,6 +57,7 @@ It is also possible to calculate SJR rank per subject area code per each serial 
 2  3L: Language, Linguistics, Literature              3310                             1.0
 3  3L: Language, Linguistics, Literature              1208                             1.0
 4                                   452F              1208                             NaN
+>>>
 ```
 
 **Note that the SJR rank per subject area code is computed only on the data you harvest. Also, for journals that do not have a SJR, the rank is not computed.**
