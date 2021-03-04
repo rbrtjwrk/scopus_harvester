@@ -28,6 +28,11 @@ To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 3         BUSI            Business, Management and Accounting
 4         CENG                           Chemical Engineering
 >>>
+```
+
+You must first set up your API credentials in function _scopus_get_journals()_ before harvesting.
+
+```
 >>> df=sh.scopus_journals("ARTS", 3)
 >>>
 >>> df
@@ -39,8 +44,6 @@ To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 >>>
 
 ```
-
-But first you have to set your API credentials in function _scopus_get_journals()_.
 
 It is also possible to calculate SJR rank per subject area code per each serial title. To do that, run three following functions in the same order:
 
