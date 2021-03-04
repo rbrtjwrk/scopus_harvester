@@ -2,6 +2,7 @@ import requests
 import json
 import pandas as pd
 import numpy as np
+import pkg_resources
 
 from .scopus_get_journals import scopus_get_journals
 from .response_to_json import response_to_json
@@ -11,6 +12,7 @@ from .scopus_journal_id import scopus_journal_id
 from .scopus_sjr import scopus_sjr
 from .scopus_citescore import scopus_citescore
 from .scopus_issn import parse_scopus_issn_dict, scopus_issn
+from .scopus_subject_areas import scopus_subject_areas
 from .scopus_subject_area import scopus_subject_area
 from .scopus_subject_area_code import scopus_subject_area_code
 from .scopus_subject_classification import scopus_subject_classification
