@@ -54,12 +54,10 @@ Parameters:<br/>
 ```
 
 
-It is also possible to calculate SJR rank per subject area code per each serial title. To do that, run three following functions in the same order:
+It is also possible to compute SJR rank per subject area code per each serial title. To do that, run the function _sjr_rank_per_subject_area_code(dataframe)_.
 
 
 ```
->>> df=sh.multiply_journals(df)
->>> df=sh.rearrange_subject_attributes(df)
 >>> df=sh.sjr_rank_per_subject_area_code(df)
 >>>
 >>> df.iloc[:, [0,6,8]]
