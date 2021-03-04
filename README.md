@@ -14,7 +14,7 @@ A set of functions to call **_Scopus Serial Title Metadata API_** and harvest fo
 | Scopus Subject Classification    |
 
 
-Although it is possible to call standalone functions separately, I recommend you to call function _scopus_journals(subject_abbrev, count)_ to obtain all of the attributes at once.
+Although it is possible to call standalone functions separately, I recommend you to call function _scopus_journals(subject_abbrev=None, count=None)_ to obtain all of the attributes at once.\
 
 To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 
