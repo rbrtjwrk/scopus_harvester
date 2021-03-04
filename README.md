@@ -16,13 +16,15 @@ Set of functions to call _Scopus Serial Title Metadata API_ and harvest followin
 Although it is possible to call standalone functions separately, I recommend you to call function _scopus_journals(subject_abbrev, count)_ to obtain all of the attributes at once. List of all subject areas can be found at https://dev.elsevier.com/.
 
 ```
-df=scopus_journals("ARTS", 3)
-
-df
+>>> df=scopus_journals("ARTS", 3)
+>>>
+>>> df
                            Journal_Title   Journal_ID       ISSN  ...        Subject_Area   Subject_Area_Code                             Subject_Classification
 0                     21st Century Music  18500162600  1534-3219  ...              [ARTS]              [1210]                                            [Music]
 1  3L: Language, Linguistics, Literature  19700200922  0128-5157  ...  [ARTS, SOCI, ARTS]  [1203, 3310, 1208]  [Language and Linguistics, Linguistics and Lan...
 2                                   452F  21101005201             ...              [ARTS]              [1208]                   [Literature and Literary Theory]
+[3 rows x 8 columns]
+>>>
 
 ```
 
