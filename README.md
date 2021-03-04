@@ -32,6 +32,17 @@ But first you have to set your API credentials in function _scopus_get_journals(
 
 It is also possible to calculate SJR rank per subject area code per each serial title. To do that, run three following functions in the same order:
 
-df=_multiply_journals(dataframe)_\
-df=_rearrange_subject_attributes(dataframe)_\
-df=_sjr_rank_per_subject_area_code(dataframe)_
+```
+>>> df=sh.multiply_journals(df)
+>>> df=sh.rearrange_subject_attributes(df)
+>>> df=sh.sjr_rank_per_subject_area_code(df)
+>>>
+>>> df.iloc[:, [0,6,8]]
+                           Journal_Title Subject_Area_Code  SJR_Rank_per_Subject_Area_Code
+0                     21st Century Music              1210                             1.0
+1  3L: Language, Linguistics, Literature              1203                             1.0
+2  3L: Language, Linguistics, Literature              3310                             1.0
+3  3L: Language, Linguistics, Literature              1208                             1.0
+4                                   452F              1208                             NaN
+```
+
