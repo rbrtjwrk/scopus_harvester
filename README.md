@@ -33,7 +33,7 @@ To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 ```
 
 
-Before harvesting, you must first manually set up your API Key in the function _scopus_get_journals()_.
+Before harvesting, you must first manually set up your API Key in the file _scopus_get_journals.py_.
 
 
 ```
