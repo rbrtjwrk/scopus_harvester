@@ -18,5 +18,3 @@ from .scopus_journals import scopus_journals
 from .multiply_journals import multiply_journals
 from .rearrange_subject_attributes import rearrange_subject_attributes
 from .sjr_rank_per_subject_area_code import sjr_rank_per_subject_area_code
-
-code/
