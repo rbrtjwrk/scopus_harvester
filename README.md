@@ -21,13 +21,12 @@ To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 >>> import scopus_harvester as sh
 >>> 
 >>> sh.scopus_subject_areas().head()
->>> 
->>>   Subject_Area                        Subject_Area: Full_Name
-0         AGRI               Agricultural and Biological Sciences
-1         ARTS                                Arts and Humanities
-2         BIOC       Biochemistry, Genetics and Molecular Biology
-3         BUSI                Business, Management and Accounting
-4         CENG                               Chemical Engineering
+  Subject_Area                        Subject_Area: Full_Name
+0         AGRI           Agricultural and Biological Sciences
+1         ARTS                            Arts and Humanities
+2         BIOC   Biochemistry, Genetics and Molecular Biology
+3         BUSI            Business, Management and Accounting
+4         CENG                           Chemical Engineering
 >>>
 >>> df=sh.scopus_journals("ARTS", 3)
 >>>
