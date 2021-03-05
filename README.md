@@ -20,6 +20,8 @@ To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 
 
 ```
+.. example-begin
+.. code:: python
 >>> import scopus_harvester as sh
 >>> 
 >>> sh.scopus_subject_areas().head()
@@ -51,6 +53,7 @@ Parameters:<br/>
 2                                   452F  21101005201             ...              [ARTS]              [1208]                   [Literature and Literary Theory]
 [3 rows x 8 columns]
 >>>
+.. example-end
 ```
 
 
