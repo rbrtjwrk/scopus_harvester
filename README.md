@@ -22,7 +22,7 @@ To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 ```python
 >>> import scopus_harvester as sh
 >>> 
->>> sh.scopus_subject_areas().head() python-end
+>>> sh.scopus_subject_areas().head()-
   Subject_Area                        Subject_Area: Full_Name
 0         AGRI           Agricultural and Biological Sciences
 1         ARTS                            Arts and Humanities
