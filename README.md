@@ -32,6 +32,7 @@ To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 3         BUSI            Business, Management and Accounting
 4         CENG                           Chemical Engineering
 >>>
+.. example-end
 ```
 
 
@@ -53,7 +54,6 @@ Parameters:<br/>
 2                                   452F  21101005201             ...              [ARTS]              [1208]                   [Literature and Literary Theory]
 [3 rows x 8 columns]
 >>>
-.. example-end
 ```
 
 
