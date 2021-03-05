@@ -41,7 +41,7 @@ Parameters:<br/>
     ⋅⋅⋅ **count**: int, default _None_; count cannot be lower than 1.
 
 
-```
+```python
 >>> df=sh.scopus_journals("ARTS", count=3)
 >>>
 >>> df
@@ -57,7 +57,7 @@ Parameters:<br/>
 It is also possible to compute SJR rank per subject area code per each serial title. To do that, call the function _sjr_rank_per_subject_area_code(dataframe)_.
 
 
-```
+```python
 >>> df=sh.sjr_rank_per_subject_area_code(df)
 >>>
 >>> df.iloc[:, [0,6,8]]
