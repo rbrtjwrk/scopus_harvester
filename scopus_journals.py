@@ -12,11 +12,11 @@ from scopus_harvester.scopus_subject_area import scopus_subject_area
 from scopus_harvester.scopus_subject_area_code import scopus_subject_area_code
 from scopus_harvester.scopus_subject_classification import scopus_subject_classification
 
-def scopus_journals(subject_abbrev=None, count=None):
+def scopus_journals(subject_abbrev=None, count=None, start=0):
     if count == None or count < 1:
         raise Exception("'count' cannot be lower than 1.")
     output=pd.DataFrame()
-    response=scopus_get_journals(subject_abbrev=subject_abbrev, count=count)
+    response=scopus_get_journals(subject_abbrev=subject_abbrev, count=count, start=start)
     output["Journal_Title"]=scopus_journal_title(response)
     output["Journal_ID"]=scopus_journal_id(response)
     output["ISSN"]=scopus_issn(response)
