@@ -35,11 +35,11 @@ To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 
 Before harvesting, you must first manually set up your API Key in the file _scopus_get_journals.py_.
 
-Then call the function _scopus_journals(subject_abbrev=None, count=None)_.<br/>
+Then call the function _scopus_journals(subject_abbrev=None, count=None, start=0)_.<br/>
 Parameters:<br/>
     ⋅⋅⋅ **subject_abbrev**: str, default _None_; you could either leave this parameter unspecified or select exactly one subject area.<br/>
     ⋅⋅⋅ **count**: int, default _None_; count cannot be lower than 1.<br/>
-    ⋅⋅⋅ **start**: int, default 0
+    ⋅⋅⋅ **start**: int, default 0.
 
 
 ```
