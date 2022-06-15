@@ -9,6 +9,7 @@ A set of functions to call **_Scopus Serial Title Metadata API_** and harvest fo
 | SJR                              |
 | Citescore                        |
 | ISSN                             |
+| eISSN                            |
 | Scopus Subject Area              |
 | Scopus Subject Area Code         |
 | Scopus Subject Classification    |
