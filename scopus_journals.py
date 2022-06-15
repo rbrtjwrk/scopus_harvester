@@ -7,7 +7,7 @@ from scopus_harvester.scopus_journal_title import scopus_journal_title
 from scopus_harvester.scopus_journal_id import scopus_journal_id
 from scopus_harvester.scopus_sjr import scopus_sjr
 from scopus_harvester.scopus_citescore import scopus_citescore
-from scopus_harvester.scopus_issn import parse_scopus_issn_dict, scopus_issn
+from scopus_harvester.scopus_issn import parse_scopus_issn_dict, scopus_issn, scopus_eissn
 from scopus_harvester.scopus_subject_area import scopus_subject_area
 from scopus_harvester.scopus_subject_area_code import scopus_subject_area_code
 from scopus_harvester.scopus_subject_classification import scopus_subject_classification
@@ -20,6 +20,7 @@ def scopus_journals(subject_abbrev=None, count=None, start=0):
     output["Journal_Title"]=scopus_journal_title(response)
     output["Journal_ID"]=scopus_journal_id(response)
     output["ISSN"]=scopus_issn(response)
+    output["eISSN"]=scopus_eissn(response)
     output["SJR"]=scopus_sjr(response)
     output["CiteScore"]=scopus_citescore(response)
     output["Subject_Area"]=scopus_subject_area(response)
