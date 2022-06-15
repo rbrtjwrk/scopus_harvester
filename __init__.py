@@ -11,7 +11,7 @@ from .scopus_journal_title import scopus_journal_title
 from .scopus_journal_id import scopus_journal_id
 from .scopus_sjr import scopus_sjr
 from .scopus_citescore import scopus_citescore
-from .scopus_issn import parse_scopus_issn_dict, scopus_issn
+from .scopus_issn import parse_scopus_issn_dict, scopus_issn, scopus_eissn
 from .scopus_subject_areas import scopus_subject_areas
 from .scopus_subject_area import scopus_subject_area
 from .scopus_subject_area_code import scopus_subject_area_code
