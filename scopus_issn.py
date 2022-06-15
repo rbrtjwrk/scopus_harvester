@@ -22,3 +22,21 @@ def scopus_issn(response):
     else:
         output=data[0]["prism:issn"]
     return output
+
+
+def scopus_eissn(response):
+    output=[]
+    f=response_to_json(response)
+    data=file_to_data(f)
+    if len(data)>0:
+        for _ in range(len(data)):
+            if "prism:eIssn" in data[_]:
+                if isinstance(data[_]["prism:eIssn"], str):
+                    output.append(data[_]["prism:eIssn"])
+                else:
+                    output.append(parse_scopus_issn_dict(data[_]["prism:eIssn"]))
+            else:
+                output.append(" ")
+    else:
+        output=data[0]["prism:eIssn"]
+    return output
