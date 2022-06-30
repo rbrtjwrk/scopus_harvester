@@ -1,7 +1,9 @@
 # scopus_harvester
 
 #### Requirements
-json 2.0.9, Requests 2.25.1, Pandas
+json 2.0.9, Requests 2.25.1, Pandas  
+
+## description
 
 A set of functions to call **_Scopus Serial Title Metadata API_** and harvest following serial title's attributes:
 
