@@ -1,6 +1,9 @@
 import pandas as pd
 
 def multiply_journals(dataframe, alphabetical_order=True):
+    """Creates as many rows per each journal in the dataframe
+    as in how many subject categories is the specific journal indexed.
+    """
     for row in dataframe.itertuples():
         multiply_by=len(row.Subject_Classification)
         if multiply_by > 1:
@@ -10,3 +13,4 @@ def multiply_journals(dataframe, alphabetical_order=True):
     dataframe=dataframe.reset_index()
     dataframe=dataframe.drop(columns=["index", "Index"])
     return dataframe
+
