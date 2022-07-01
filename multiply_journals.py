@@ -14,3 +14,4 @@ def multiply_journals(dataframe, alphabetical_order=True):
     dataframe=dataframe.drop(columns=["index", "Index"])
     return dataframe
 
+
