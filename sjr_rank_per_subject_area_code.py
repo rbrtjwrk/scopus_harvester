@@ -5,6 +5,9 @@ from scopus_harvester.multiply_journals import multiply_journals
 from scopus_harvester.rearrange_subject_attributes import rearrange_subject_attributes
 
 def sjr_rank_per_subject_area_code(dataframe):
+    """Computes rank per subject area (code) based on SJR
+    for all journals in a given dataframe.
+    """
     dataframe=dataframe.copy()
     dataframe=multiply_journals(dataframe)
     dataframe=rearrange_subject_attributes(dataframe)
@@ -15,3 +18,5 @@ def sjr_rank_per_subject_area_code(dataframe):
         dataframe["Subject_Area_Code"]=[" ".join(_) for _ in dataframe["Subject_Area_Code"]]
     dataframe["SJR_Rank_per_Subject_Area_Code"]=dataframe.groupby("Subject_Area_Code")["SJR"].rank(ascending=False)
     return dataframe
+
+
