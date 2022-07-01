@@ -1,7 +1,7 @@
 # scopus_harvester
 
 #### Requirements
-json 2.0.9, Requests 2.25.1, Pandas  
+json 2.0.9, Requests 2.25.1, Pandas, Numpy, pkg resources
 
 ## description
 
