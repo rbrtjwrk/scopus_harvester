@@ -1,6 +1,12 @@
 import pandas as pd
 
 def rearrange_subject_attributes(dataframe):
+    """If a journal has more subject areas and codes,
+    rearranges these so there is exactly
+    one subject area/subject area code per row.
+    Is executed as a part of processing
+    of SJR rak per subject area (code).
+    """
     dataframe=dataframe.copy()
     jt_col_idx=dataframe.columns.get_loc("Journal_Title")
     sc_col_idx=dataframe.columns.get_loc("Subject_Classification")
@@ -25,3 +31,5 @@ def rearrange_subject_attributes(dataframe):
             border_2=sum(dataframe.iloc[row_idx:, jt_col_idx]==row.Journal_Title)-1
             dataframe.iloc[row_idx, sa_col_idx]=row.Subject_Area[border_1:(len(row.Subject_Area)-border_2)]
     return dataframe
+
+
