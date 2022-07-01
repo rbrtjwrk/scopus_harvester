@@ -35,4 +35,3 @@ def scopus_journals(subject_abbrev=None, count=None, start=0):
     return output
 
 
-
