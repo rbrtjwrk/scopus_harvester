@@ -2,6 +2,9 @@ from scopus_harvester.response_to_json import response_to_json
 from scopus_harvester.file_to_data import file_to_data
 
 def scopus_subject_classification(response):
+    """Retrieves subject classification(s)
+    per journal from the API’s response.
+    """
     output=[]
     f=response_to_json(response)
     data=file_to_data(f)
@@ -15,3 +18,5 @@ def scopus_subject_classification(response):
         else:
             output.append(data[_]["subject-area"]["$"])
     return output
+
+
