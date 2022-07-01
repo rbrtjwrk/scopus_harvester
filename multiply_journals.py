@@ -3,6 +3,7 @@ import pandas as pd
 def multiply_journals(dataframe, alphabetical_order=True):
     """Creates as many rows per each journal in the dataframe
     as in how many subject categories is the specific journal indexed.
+    Is executed as a part of processing of SJR rak per subject area (code).
     """
     for row in dataframe.itertuples():
         multiply_by=len(row.Subject_Classification)
