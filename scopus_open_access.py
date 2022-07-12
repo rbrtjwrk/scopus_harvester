@@ -20,3 +20,4 @@ def open_access(response):
         output.append(data[0]["openaccess"])
     return output
 
+
