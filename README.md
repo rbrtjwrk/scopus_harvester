@@ -49,17 +49,58 @@ Parameters:<br/>
 
 
 ```
->>> df=sh.scopus_journals("ARTS", count=3, start=0)
+>>> df=sh.scopus_journals(subject_abbrev="ARTS", count=3, start=0)
 >>>
 >>> df
-                           Journal_Title   Journal_ID       ISSN  ...        Subject_Area   Subject_Area_Code                             Subject_Classification
-0                     21st Century Music  18500162600  1534-3219  ...              [ARTS]              [1210]                                            [Music]
-1  3L: Language, Linguistics, Literature  19700200922  0128-5157  ...  [ARTS, SOCI, ARTS]  [1203, 3310, 1208]  [Language and Linguistics, Linguistics and Lan...
-2                                   452F  21101005201             ...              [ARTS]              [1208]                   [Literature and Literary Theory]
+                           Journal_Title   Journal_ID       ISSN  ...  Subject_Area_Code                                 Subject_Classification  Open_Access
+0                     21st Century Music  18500162600  1534-3219  ...  [1210]              [Music]                                               None
+1  3L: Language, Linguistics, Literature  19700200922  0128-5157  ...  [1203, 3310, 1208]  [Language and Linguistics, Linguistics and Language]  1
+2                                   452F  21101005201             ...  [1208]              [Literature and Literary Theory]                      1
 [3 rows x 8 columns]
 >>>
 ```
 
+
+If you want to harvest all Scopus sources at once, you may encounter API limits, therefore it is advisable to dowload the data in batches. E.g. harvest data in batches per subject area/subject code:
+
+```python
+import pandas as pd
+import scopus_harvester as sh
+
+def get_entries(subject_area):
+    output=[]
+    s=0
+    for _ in range(1000):
+        try:
+            r=sh.scopus_journals(subject_abbrev=subject_area, count=200, start=s)
+            ooutput.append(r)
+            s+=200
+        # if there are no more journals in a given subject area
+        except KeyError: 
+            return output
+
+def flatten_dfs(list_of_dfs):
+    ooutput=pd.DataFrame()
+    for _ in list_of_dfs:
+        output=output.append(_)
+    return output
+
+subject_areas=sh.scopus_subject_areas()
+
+res=pd.DataFrame()
+
+for sa in subject_areas.Subject_Area:
+    print(sa)
+    entries=get_entries(sa)
+    print("--- entries downloaded")
+    flattened_entries=flatten_dfs(entries)
+    print(f"--- {sa}: {len(flattened_entries)}")
+    print("--- entries flattend")
+    res=res.append(flattened_entries)
+    print("--- entries appended")
+    print("")
+
+```
 
 It is also possible to compute SJR rank per subject area code per each serial title. To do that, call the function _sjr_rank_per_subject_area_code(dataframe)_.
 
