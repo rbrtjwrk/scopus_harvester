@@ -48,7 +48,7 @@ Parameters:<br/>
     ⋅⋅⋅ **start**: int, default 0.
 
 
-```
+```python
 >>> df=sh.scopus_journals(subject_abbrev="ARTS", count=3, start=0)
 >>>
 >>> df
@@ -85,27 +85,28 @@ def flatten_dfs(list_of_dfs):
         output=output.append(_)
     return output
 
-subject_areas=sh.scopus_subject_areas()
+>>> subject_areas=sh.scopus_subject_areas()
 
-res=pd.DataFrame()
+>>> res=pd.DataFrame()
 
-for sa in subject_areas.Subject_Area:
-    print(sa)
-    entries=get_entries(sa)
-    print("--- entries downloaded")
-    flattened_entries=flatten_dfs(entries)
-    print(f"--- {sa}: {len(flattened_entries)}")
-    print("--- entries flattend")
-    res=res.append(flattened_entries)
-    print("--- entries appended")
-    print("")
+>>> for sa in subject_areas.Subject_Area:
+...    print(sa)
+...    entries=get_entries(sa)
+...    print("--- entries downloaded")
+...    flattened_entries=flatten_dfs(entries)
+...    print(f"--- {sa}: {len(flattened_entries)}")
+...    print("--- entries flattend")
+...    res=res.append(flattened_entries)
+...    print("--- entries appended")
+...    print("")
 
 ```
+
 
 It is also possible to compute SJR rank per subject area code per each serial title. To do that, call the function _sjr_rank_per_subject_area_code(dataframe)_.
 
 
-```
+```python
 >>> df=sh.sjr_rank_per_subject_area_code(df)
 >>>
 >>> df.iloc[:, [0,6,8]]
