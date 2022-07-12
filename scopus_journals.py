@@ -11,6 +11,7 @@ from scopus_harvester.scopus_issn import parse_scopus_issn_dict, scopus_issn, sc
 from scopus_harvester.scopus_subject_area import scopus_subject_area
 from scopus_harvester.scopus_subject_area_code import scopus_subject_area_code
 from scopus_harvester.scopus_subject_classification import scopus_subject_classification
+from scopus_harvester.scopus_open_access import scopus_open_access
 
 def scopus_journals(subject_abbrev=None, count=None, start=0):
     """Retrieves journals from the Scopus Serial Title Metadata API.
@@ -32,6 +33,7 @@ def scopus_journals(subject_abbrev=None, count=None, start=0):
     output["Subject_Area"]=scopus_subject_area(response)
     output["Subject_Area_Code"]=scopus_subject_area_code(response)
     output["Subject_Classification"]=scopus_subject_classification(response)
+    output["Open_Access"]=open_access(response)
     return output
 
 
