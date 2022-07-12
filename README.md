@@ -40,6 +40,9 @@ To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 ```
 
 
+To see all Scopus Subject Area Codes, go [here](https://api.elsevier.com/content/subject/scopus?httpAccept=text/xml).
+
+
 Before harvesting, you must first manually set up your API Key in the file _scopus_get_journals.py_.
 
 Then call the function _scopus_journals(subject_abbrev=None, subject_code=None, count=None, start=0)_.<br/>
