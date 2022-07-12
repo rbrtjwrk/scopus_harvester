@@ -104,7 +104,7 @@ def flatten_dfs(list_of_dfs):
 ...    res=res.append(flattened_entries)
 ...    print("--- entries appended")
 ...    print("")
-
+>>>
 ```
 
 
