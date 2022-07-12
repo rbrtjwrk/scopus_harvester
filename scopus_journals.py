@@ -13,7 +13,7 @@ from scopus_harvester.scopus_subject_area_code import scopus_subject_area_code
 from scopus_harvester.scopus_subject_classification import scopus_subject_classification
 from scopus_harvester.scopus_open_access import scopus_open_access
 
-def scopus_journals(subject_abbrev=None, count=None, start=0):
+def scopus_journals(subject_abbrev=None, subject_code=None, count=None, start=0):
     """Retrieves journals from the Scopus Serial Title Metadata API.
     You can specify subject area abbreviation, count and start index for the retrieval,
     or you cal leave arguments empty - only count cannot be lower than 1.
@@ -23,7 +23,7 @@ def scopus_journals(subject_abbrev=None, count=None, start=0):
     if count == None or count < 1:
         raise Exception("'count' cannot be lower than 1.")
     output=pd.DataFrame()
-    response=scopus_get_journals(subject_abbrev=subject_abbrev, count=count, start=start)
+    response=scopus_get_journals(subject_abbrev=subject_abbrev, subject_code=subject_code, count=count, start=start)
     output["Journal_Title"]=scopus_journal_title(response)
     output["Journal_ID"]=scopus_journal_id(response)
     output["ISSN"]=scopus_issn(response)
