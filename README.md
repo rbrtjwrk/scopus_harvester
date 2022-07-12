@@ -25,7 +25,7 @@ Although it is possible to call standalone functions separately, I recommend you
 To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 
 
-```python
+```
 >>> import scopus_harvester as sh
 >>> 
 >>> sh.scopus_subject_areas().head()
@@ -48,7 +48,7 @@ Parameters:<br/>
     ⋅⋅⋅ **start**: int, default 0.
 
 
-```python
+```
 >>> df=sh.scopus_journals(subject_abbrev="ARTS", count=3, start=0)
 >>>
 >>> df
@@ -63,7 +63,7 @@ Parameters:<br/>
 
 If you want to harvest all Scopus sources at once, you may encounter API limits, therefore it is advisable to dowload the data in batches. E.g. harvest data in batches per subject area/subject code:
 
-```python
+```
 import pandas as pd
 import scopus_harvester as sh
 
@@ -106,7 +106,7 @@ def flatten_dfs(list_of_dfs):
 It is also possible to compute SJR rank per subject area code per each serial title. To do that, call the function _sjr_rank_per_subject_area_code(dataframe)_.
 
 
-```python
+```
 >>> df=sh.sjr_rank_per_subject_area_code(df)
 >>>
 >>> df.iloc[:, [0,6,8]]
