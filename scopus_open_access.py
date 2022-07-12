@@ -19,6 +19,3 @@ def open_access(response):
     else:
         output.append(data[0]["openaccess"])
     return output
-
-  
-  
