@@ -18,7 +18,7 @@ def scopus_journals(subject_abbrev=None, subject_code=None, count=None, start=0)
     You can specify subject area abbreviation, count and start index for the retrieval,
     or you cal leave arguments empty - only count cannot be lower than 1.
     Returns a dataframe containing following columns: Journal Title, Journal ID, ISSN,
-    eISSN, SJR, CiteScore, Subject_Area, Subject_Area_Code and Subject_Classification.
+    eISSN, SJR, CiteScore, Subject_Area, Subject_Area_Code and Subject_Classification, Open_Access.
     """
     if count == None or count < 1:
         raise Exception("'count' cannot be lower than 1.")
