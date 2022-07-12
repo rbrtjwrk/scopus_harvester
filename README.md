@@ -25,7 +25,7 @@ Although it is possible to call standalone functions separately, I recommend you
 To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 
 
-```
+```python
 >>> import scopus_harvester as sh
 >>> 
 >>> sh.scopus_subject_areas().head()
