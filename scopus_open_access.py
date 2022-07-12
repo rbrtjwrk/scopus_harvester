@@ -1,7 +1,7 @@
 from scopus_harvester.response_to_json import response_to_json
 from scopus_harvester.file_to_data import file_to_data
 
-def open_access(response):
+def scopus_open_access(response):
     """Returns an indicator
     0 (is not open access),
     1 (is open access) or
