@@ -33,7 +33,7 @@ def scopus_journals(subject_abbrev=None, count=None, start=0):
     output["Subject_Area"]=scopus_subject_area(response)
     output["Subject_Area_Code"]=scopus_subject_area_code(response)
     output["Subject_Classification"]=scopus_subject_classification(response)
-    output["Open_Access"]=open_access(response)
+    output["Open_Access"]=scopus_open_access(response)
     return output
 
 
