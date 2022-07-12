@@ -23,7 +23,7 @@ A set of functions to call **_Scopus Serial Title Metadata API_** and harvest fo
 
 Although it is possible to call standalone functions separately, I recommend you to call the function _scopus_journals(subject_abbrev=None, subject_code=None, count=None, start=0)_ to obtain all of the attributes at once.
 
-To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
+To see all **Scopus Subject Areas**, call function _scopus_subject_areas()_.
 
 
 ```
@@ -40,7 +40,7 @@ To see all Scopus Subject Areas, call function _scopus_subject_areas()_.
 ```
 
 
-To see all Scopus Subject Area Codes, go [here](https://api.elsevier.com/content/subject/scopus?httpAccept=text/xml).
+To see all **Scopus Subject Area Codes**, go **[here](https://api.elsevier.com/content/subject/scopus?httpAccept=text/xml)**.
 
 
 Before harvesting, you must first manually set up your API Key in the file _scopus_get_journals.py_.
