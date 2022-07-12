@@ -69,31 +69,31 @@ Parameters:<br/>
 If you want to harvest all Scopus sources at once, you may encounter API limits, therefore it is advisable to dowload the data in batches. E.g. harvest data in batches per subject area/subject area code:
 
 ```
-import pandas as pd
-import scopus_harvester as sh
-
-def get_entries(subject_area):
-    output=[]
-    s=0
-    for _ in range(1000):
-        try:
-            r=sh.scopus_journals(subject_abbrev=subject_area, count=200, start=s)
-            ooutput.append(r)
-            s+=200
-        # if there are no more journals in a given subject area
-        except KeyError: 
-            return output
-
-def flatten_dfs(list_of_dfs):
-    ooutput=pd.DataFrame()
-    for _ in list_of_dfs:
-        output=output.append(_)
-    return output
-
+>>> import pandas as pd
+>>> import scopus_harvester as sh
+>>>
+>>> def get_entries(subject_area):
+...    output=[]
+...    s=0
+...    for _ in range(1000):
+...        try:
+...            r=sh.scopus_journals(subject_abbrev=subject_area, count=200, start=s)
+...            ooutput.append(r)
+...            s+=200
+...        # if there are no more journals in a given subject area
+...        except KeyError: 
+...            return output
+>>>
+>>> def flatten_dfs(list_of_dfs):
+...    ooutput=pd.DataFrame()
+...    for _ in list_of_dfs:
+...        output=output.append(_)
+...    return output
+>>>
 >>> subject_areas=sh.scopus_subject_areas()
-
+>>>
 >>> res=pd.DataFrame()
-
+>>>
 >>> for sa in subject_areas.Subject_Area:
 ...    print(sa)
 ...    entries=get_entries(sa)
