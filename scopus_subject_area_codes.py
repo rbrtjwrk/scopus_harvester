@@ -9,3 +9,4 @@ def scopus_subject_area_codes():
     output=pd.read_table(path, delimiter="-")
     return output
 
+
