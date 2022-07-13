@@ -8,3 +8,4 @@ def scopus_subject_area_codes():
     path=pkg_resources.resource_filename("scopus_harvester", "data/scopus_subject_area_codes.txt")
     output=pd.read_table(path, delimiter="-")
     return output
+
