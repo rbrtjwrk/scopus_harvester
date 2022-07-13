@@ -8,17 +8,13 @@ json 2.0.9, Requests 2.25.1, Pandas, Numpy, pkg resources
 A set of functions to call **_Scopus Serial Title Metadata API_** and harvest following serial title's attributes:
 
 | Scopus Serial Title's attributes |
-| -------------------------------- |
-| Journal Title                    |
-| Journal ID                       |
-| SJR                              |
-| Citescore                        |
-| ISSN                             |
-| eISSN                            |
-| Scopus Subject Area              |
-| Scopus Subject Area Code         |
-| Scopus Subject Classification    |
-| Open Access                      |
+| -------------------------------- |-------------------------------- |
+| Journal Title                    | eISSN                           |
+| Journal ID                       | Scopus Subject Area             |
+| SJR                              | Scopus Subject Area Code        |
+| Citescore                        | Scopus Subject Classification   |
+| ISSN                             | Open Access                     |
+
 
 
 Although it is possible to call standalone functions separately, I recommend you to call the function _scopus_journals(subject_abbrev=None, subject_code=None, count=None, start=0)_ to obtain all of the attributes at once.
