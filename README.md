@@ -1,9 +1,9 @@
-# scopus_harvester
+# Scopus Harvester
 
 #### Requirements
 json 2.0.9, Requests 2.25.1, Pandas, Numpy, pkg resources
 
-## description
+## Description
 
 A set of functions to call **_Scopus Serial Title Metadata API_** and harvest following serial title's attributes:
 
@@ -76,7 +76,7 @@ Parameters:<br/>
 ```
 
 
-If you want to harvest all Scopus sources at once, you may encounter API limits, therefore it is advisable to dowload the data in batches. E.g. harvest data in batches per subject area/subject area code:
+If you want to harvest all Scopus indexed serial titles at once, you may encounter API limits, therefore it is advisable to download the data in batches. E.g. harvest data in batches per subject area/subject area code:
 
 ```
 >>> import pandas as pd
@@ -135,4 +135,4 @@ It is also possible to compute SJR rank per subject area code per each serial ti
 ```
 
 
-**Note that the SJR rank per subject area code is computed only on the data you harvest. Also, for journals that do not have a SJR, the rank is not computed.**
+**Note that the SJR rank per subject area code is computed only on the data you harvest. Also, for serial titles that do not have a SJR, the rank is not computed.**
