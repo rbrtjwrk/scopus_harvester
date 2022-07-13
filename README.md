@@ -7,7 +7,7 @@ json 2.0.9, Requests 2.25.1, Pandas, Numpy, pkg resources
 
 A set of functions to call **_Scopus Serial Title Metadata API_** and harvest following serial title's attributes:
 
-| Scopus Serial Title's attributes |
+| Scopus Serial Title's attributes |                                 |
 | -------------------------------- |-------------------------------- |
 | Journal Title                    | eISSN                           |
 | Journal ID                       | Scopus Subject Area             |
