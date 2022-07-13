@@ -1,7 +1,5 @@
 # Scopus Harvester
 
-## Description
-
 A set of functions to call **_Scopus Serial Title Metadata API_** and harvest following serial title's attributes:
 
 | Scopus Serial Title's attributes |                                 |
