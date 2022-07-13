@@ -40,7 +40,21 @@ To see all **Scopus Subject Areas**, call function _scopus_subject_areas()_.
 ```
 
 
-To see all **Scopus Subject Area Codes**, go **[here](https://api.elsevier.com/content/subject/scopus?httpAccept=text/xml)**.
+To see all **Scopus Subject Area Codes**, call function _scopus_subject_area_codes()_.
+
+
+```
+>>> import scopus_harvester as sh
+>>>
+>>> sh.scopus_subject_area_codes().head()
+     Subject_Area_Code                             Subject_Classification
+0                 1000                                  Multidisciplinary
+1                 1100         Agricultural and Biological Sciences (all)
+2                 1101   Agricultural and Biological Sciences (miscell...
+3                 1102                          Agronomy and Crop Science
+4                 1103                         Animal Science and Zoology
+>>>
+```
 
 
 Before harvesting, you must first manually set up your API Key in the file _scopus_get_journals.py_.
