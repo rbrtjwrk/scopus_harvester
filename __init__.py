@@ -14,6 +14,7 @@ from .scopus_citescore import scopus_citescore
 from .scopus_issn import parse_scopus_issn_dict, scopus_issn, scopus_eissn
 from .scopus_subject_areas import scopus_subject_areas
 from .scopus_subject_area import scopus_subject_area
+from .scopus_subject_area_codes import scopus_subject_area_codes
 from .scopus_subject_area_code import scopus_subject_area_code
 from .scopus_subject_classification import scopus_subject_classification
 from .scopus_journals import scopus_journals
