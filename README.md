@@ -18,6 +18,8 @@ pip install git+https://github.com/rbrtjwrk/scopus_harvester.git
 ```
 
 
+## Usage
+
 Although it is possible to call standalone functions separately, I recommend you to call the function _scopus_journals(subject_abbrev=None, subject_code=None, count=None, start=0)_ to obtain all of the attributes at once.
 
 To see all **Scopus Subject Areas**, call function _scopus_subject_areas()_.
