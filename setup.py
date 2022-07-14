@@ -19,3 +19,5 @@ setuptools.setup(
     packages=["scopus_harvester"],
     install_requires=["requests", "pandas", "numpy"],
 )
+
+
