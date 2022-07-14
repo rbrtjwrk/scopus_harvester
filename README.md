@@ -13,6 +13,7 @@ A set of functions to call **_Scopus Serial Title Metadata API_** and harvest fo
 
 ## Installation
 
+For the installation, you need to have a [git](https://github.com/git-guides/install-git) on your system.
 ```
 pip install git+https://github.com/rbrtjwrk/scopus_harvester.git
 ```
