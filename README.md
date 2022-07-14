@@ -140,3 +140,8 @@ It is also possible to compute SJR rank per subject area code per each serial ti
 
 
 **Note that the SJR rank per subject area code is computed only on the data you harvest. Also, for serial titles that do not have a SJR, the rank is not computed.**
+
+
+## License
+
+MIT, [see](LICENSE).
