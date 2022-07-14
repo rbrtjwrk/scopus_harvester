@@ -17,5 +17,5 @@ setuptools.setup(
     },
     license="MIT",
     packages=["scopus_harvester"],
-    install_requires=["json", "requests", "pandas", "numpy", "pkg_resources"],
+    install_requires=["requests", "pandas", "numpy"],
 )
